@@ -7,22 +7,16 @@
 		<script src="main.js"></script>
     </head>
     <body>
-		<form action="index.php" method="post" enctype="multipart/form-data">
-			<label>
-				Username
-				<input type="text" name="user">
-			</label>
-			<label>
-				Password
-				<input type="password" name="pass">
-			</label>
+		<div>
 			<label>
 				Choose file
 				<input name="urls" type="file" id="file-input">
 			</label>
-			<input type="submit">
-		</form>
-		<ul>
+			<button id="go-btn">
+				GO
+			</button>
+		</div>
+		<ul id="urls-list">
 			<?php foreach ($found as $url):?>
 			<li>
 				<a href="<?php echo htmlspecialchars($url);?>" target="_blank">
